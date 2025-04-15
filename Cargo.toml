@@ -1,0 +1,24 @@
+[package]
+name = "helloworld"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+# Solana Program SDK для создания смарт-контрактов
+solana-program = "1.18.2"
+
+# Borsh для сериализации данных
+borsh = "0.10.4"
+borsh-derive = "0.10.4"
+
+# Библиотека для хеширования, нужная для работы с hashbrown
+ahash = "0.4"
+
+# hashbrown для работы с хеш-таблицами (используется для оптимизации)
+hashbrown = "0.11"
+
+# Дополнительные зависимости, которые могут понадобиться для работы с BPF
+num-derive = "0.4"
+
+[lib]
+crate-type = ["cdylib"]
